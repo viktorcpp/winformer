@@ -1,0 +1,89 @@
+
+@mixin size( $w:null, $h:null )
+{
+    @if $w != null
+    {
+        width: $w;
+    }
+
+    @if $h != null
+    {
+        height: $h;
+    }
+
+} // size
+
+@mixin pseudo
+{
+    content:     '';
+    display:     block;
+    font-size:   0;
+    line-height: 0;
+    overflow:    hidden;
+    height:      0;
+
+} // pseudo
+
+@mixin font-size-adapt( $fmin:14, $smin:320, $fmax:30, $smax:1400 )
+{
+    // font-size: calc(FMINpx + (FMAX - FMIN) * ((100vw - SMINWpx) / (SMAXW - SMINW)));
+    //         calc(40px + (83 - 40px) * ((100vw - 320px) / (1400 - 320)));
+    font-size: calc(#{$fmin}#{px} + (#{$fmax} - 14) * ((100vw - #{$smin}#{px}) / (#{$smax} - #{$smin})));
+
+} // font-size-adapt
+
+@mixin pos-abs( $left:null, $top:null, $right:null, $bot:null, $z:null )
+{
+    position: absolute;
+
+    @include __pos-helper( $left, $top, $right, $bot, $z );
+
+} // pos-abs
+
+@mixin pos-rel( $left:null, $top:null, $right:null, $bot:null, $z:null )
+{
+    position: relative;
+
+    @include __pos-helper( $left, $top, $right, $bot, $z );
+
+} // pos-abs
+
+@mixin clear-list
+{
+    list-style: none;
+    padding:    0;
+    margin:     0;
+
+} // clear-list
+
+
+
+
+@mixin __pos-helper( $left:null, $top:null, $right:null, $bot:null, $z:null )
+{
+    @if $left != null
+    {
+        left: $left;
+    }
+
+    @if $top != null
+    {
+        top: $top;
+    }
+
+    @if $right != null
+    {
+        right: $right;
+    }
+
+    @if $bot != null
+    {
+        bottom: $bot;
+    }
+
+    @if $z != null
+    {
+        z-index: $z;
+    }
+
+} // __pos-helper

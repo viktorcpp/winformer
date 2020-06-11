@@ -1,0 +1,31 @@
+
+$page-w-mobile:         320px;
+$page-w-mobile-big:     480px;
+$page-w-tablet:         768px;
+$page-w-tablet-big:     1024px;
+$page-w-desktop-middle: 1440px;
+$page-w-desktop:        1920px;
+
+$breakpoints:
+(
+    'mobile':         $page-w-mobile,
+    'mobile-big':     $page-w-mobile-big,
+    'tablet':         $page-w-tablet,
+    'tablet-big':     $page-w-tablet-big,
+    'desktop-middle': $page-w-desktop-middle,
+    'desktop':        $page-w-desktop
+);
+
+$ani-speed-015s-base: 0.15s;
+$ani-speed-02s-base:  0.2s;
+$ani-speed-025s-base: 0.25s;
+$ani-speed-05s-base:  0.5s;
+$ani-speed-1s-base:   1s;
+
+$ani-apeed-mult: 1;
+
+$ani-speed-015s: 0.15s*$ani-apeed-mult;
+$ani-speed-02s:  0.2s*$ani-apeed-mult;
+$ani-speed-025s: 0.25s*$ani-apeed-mult;
+$ani-speed-05s:  0.5s*$ani-apeed-mult;
+$ani-speed-1s:   1s*$ani-apeed-mult;

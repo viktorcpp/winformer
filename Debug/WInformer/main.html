@@ -1,0 +1,31 @@
+<!doctype html>
+<html window-frame="transparent" window-resizable="false">
+<head>
+<title>TEST</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link type="text/css" rel="stylesheet" href="css/main.css" >
+<script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body>
+    <div class="page">
+        
+    <div class="border-top"></div>
+
+    <div class="time"  id="out-time">15:38:02</div>
+    <div class="day"   id="out-day">saturday</div>
+    <div class="date"  id="out-date">01.11.2020</div>
+    <div class="debug" id="out-debug"></div>
+
+    <div class="border-bot"></div>
+    <script type="text/tiscript">
+        var ( sx, sy, sw, sh ) = View.screenBox( 0, #workarea, #rectw );
+        var w = 170;
+        var h = 100;
+        view.move( sx + (sw - w) / 2, sy + (sh - h) / 2, w,h, true );
+        $(.page).on( 'dblclick', function(){ view.close(); } );
+    </script>
+
+    </div>
+</body>
+</html>
